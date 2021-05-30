@@ -53,29 +53,9 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Set variable1",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"variableName": "src",
-								"value": {
-									"value": "@item().sourceRelativeURL",
-									"type": "Expression"
-								}
-							}
-						},
-						{
 							"name": "cp_https",
 							"type": "Copy",
-							"dependsOn": [
-								{
-									"activity": "Set variable1",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"timeout": "0.00:00:00",
 								"retry": 0,
@@ -118,11 +98,15 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "cases_death",
+									"referenceName": "gnrl_file",
 									"type": "DatasetReference",
 									"parameters": {
-										"relativeurl": {
+										"src_url": {
 											"value": "@item().sourceBaseURL",
+											"type": "Expression"
+										},
+										"src_file_url": {
+											"value": "@item().sourceRelativeURL",
 											"type": "Expression"
 										}
 									}
@@ -134,7 +118,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"tgt_url": {
-											"value": "@pipeline().parameters.tgt",
+											"value": "@item().sinkFileName",
 											"type": "Expression"
 										}
 									}
