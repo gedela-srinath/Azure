@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "pipeline_gen",
 	"properties": {
 		"activities": [
 			{
@@ -49,17 +49,37 @@
 				"inputs": [
 					{
 						"referenceName": "cases_death",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"relativeurl": {
+								"value": "@pipeline().parameters.sourceurl",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "cases_tgt",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"tgt_url": {
+								"value": "@pipeline().parameters.tgt",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"sourceurl": {
+				"type": "string"
+			},
+			"tgt": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

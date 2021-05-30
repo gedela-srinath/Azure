@@ -1,5 +1,5 @@
 {
-	"name": "cases_death",
+	"name": "cases_death_copy1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_cases_http",
