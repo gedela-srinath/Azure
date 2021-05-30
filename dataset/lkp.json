@@ -1,0 +1,19 @@
+{
+	"name": "lkp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lkp_json",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ecdc_file_list.json",
+				"container": "lookup"
+			}
+		},
+		"schema": {}
+	}
+}
