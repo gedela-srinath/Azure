@@ -8,11 +8,11 @@
 		"ls_datalake_accountKey": {
 			"value": ""
 		},
-		"ls_datalake_properties_typeProperties_url": {
-			"value": "https://avyuadls.dfs.core.windows.net"
-		},
 		"ls_cases_http_properties_typeProperties_url": {
 			"value": "https://github.com"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"value": "https://avyuadls.dfs.core.windows.net"
 		},
 		"containerUri": {
 			"value": ""
