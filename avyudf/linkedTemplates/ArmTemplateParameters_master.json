@@ -14,6 +14,12 @@
 		"ls_datalake_properties_typeProperties_url": {
 			"value": "https://avyuadls.dfs.core.windows.net"
 		},
+		"trigger1_properties_pipeline_gen_parameters_sourceurl": {
+			"value": "cloudboxacademy/covid19/raw/main/ecdc_data/country_response.csv"
+		},
+		"trigger1_properties_pipeline_gen_parameters_tgt": {
+			"value": "country_response.csv"
+		},
 		"containerUri": {
 			"value": ""
 		},
